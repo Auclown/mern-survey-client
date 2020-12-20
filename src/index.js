@@ -8,7 +8,6 @@ import reduxThunk from "redux-thunk";
 import App from "./components/App";
 import reducers from "./reducers";
 
-
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
@@ -17,3 +16,6 @@ ReactDOM.render(
   </Provider>,
   document.querySelector("#root")
 );
+
+console.log(process.env.STRIPE_KEY);
+console.log(process.env.NODE_ENV);
